@@ -6,9 +6,9 @@ const spritesmith = require('gulp.spritesmith');
 const rimraf = require('rimraf');
 const rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
-const plugin1 = require('gulp-plugin1');
-const plugin2 = require('gulp-plugin2');
-const sourcemaps = require('gulp-sourcemaps');
+// const plugin1 = require('gulp-plugin1');
+// const plugin2 = require('gulp-plugin2');
+// const sourcemaps = require('gulp-sourcemaps');
 
 
 
@@ -113,11 +113,11 @@ gulp.task('autoprefixer', function(){
 );
 
 /*------------ Gulp sourcemaps -------------*/
-gulp.task('javascript', function() {
-    gulp.src('src/**/*.js')
-        .pipe(sourcemaps.init())
-        .pipe(plugin1())
-        .pipe(plugin2())
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('dist'));
-});
+// gulp.task('javascript', function() {
+//     gulp.src('src/**/*.js')
+//         .pipe(sourcemaps.init())
+//         .pipe(plugin1())
+//         .pipe(plugin2())
+//         .pipe(sourcemaps.write())
+//         .pipe(gulp.dest('dist'));
+// });
