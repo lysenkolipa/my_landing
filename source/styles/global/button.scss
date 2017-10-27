@@ -4,12 +4,10 @@
   padding: 10px 22px 7px;
   text-decoration: none;
   color: #fff;
-}
 
   &--red {
     background: #de2b24;
     transition: 0.3s;
-
 
     &:hover {
       background: lighten(#de2b24, 7%);
@@ -27,3 +25,4 @@
   &--text-uppercase {
     text-transform: uppercase;
   }
+}
