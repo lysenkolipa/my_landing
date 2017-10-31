@@ -1,7 +1,12 @@
 .work {
   padding: 110px 0;
-  background-color: #de2b24;
-  color: #fff;
+  background-color: #e9746f;
+  color: #515151;
+
+  @media (max-width: 985px) {
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
 
 
   &__list {
@@ -9,16 +14,27 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 0;
-    background-color: #e34943;
   }
 
-  .title--with-bottom-line {
-    &:after {
-      background: #fff;
+.title {
+  @media (max-width: 600px) {
+    margin-bottom: 40px;
+  }
+
+  &__header {
+    @media (max-width: 985px) {
+      margin-top: 0;
     }
   }
 
-  &__item{
+  &--with-bottom-line {
+    &:after {
+      background: #515151;
+    }
+  }
+}
+
+  &__item {
     width: 256px;
     height: 256px;
     font-weight: bold;
@@ -30,15 +46,18 @@
       padding: 130px 40px 75px 56px;
       text-align: center;
 
-        &:before {
-          @include sprite($work-item);
-          @include centerer-x();
+      &:before {
+        //@include sprite($work-item);
+        @include centerer-x();
 
-          content:'';
-          top: 74px;
-        }
+        content: '';
+        top: 74px;
+      }
+      @media(max-width: 492px) {
+        padding: 0;
       }
     }
+  }
 
     &__name {
       font-size: 1.625rem;

@@ -7,11 +7,11 @@
   color: #fff;
 
   &--red {
-    background: #de2b24;
+    background:#de2b24;
     transition: 0.3s;
 
     &:hover {
-      background: lighten(#de2b24, 7%);
+      background: lighten(#de2b24, 17%);
     }
   }
 

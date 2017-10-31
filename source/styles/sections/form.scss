@@ -1,7 +1,10 @@
 .form-section {
   padding: 100px 0 110px 0;
-  color: #fff;
-  background-color: #f8cd53;
+  color: #424242;
+
+  @media (max-width: 1010px) {
+    padding:30px 0 22px 0;
+  }
 
   .title {
     margin-bottom:12px;
@@ -21,7 +24,7 @@
     margin: auto auto 20px;
     width:65px;
     height: 65px;
-    border:2px solid #fff;
+    border:2px solid lightpink;
     border-radius: 50%;
   }
 
@@ -43,6 +46,11 @@
   color: #828282;
   text-align: center;
   background-color: #fff;
+
+  @media (max-width: 810px) {
+    width: 90%;
+    padding: 25px;
+  }
 
   &-container {
     padding-top: 30px;
@@ -68,11 +76,11 @@
     text-align: center;
     font-size: 2rem;
     color: #ffffff;
-    background: #de2b24;
+    background: lightpink;
     transition: 0.3s;
 
     &:hover {
-      background: lighten(#de2b24, 15%);
+      background: lighten(lightpink, 15%);
     }
   }
 
