@@ -4,13 +4,19 @@
 }
 
 .icon-like {
-  @include sprite($like);
+  //@include sprite($like);
+  margin-left: 40%;
+  color: #2a2a2a;
 }
 
 .icon-book {
-  @include sprite($book);
+  //@include sprite($book);
+  margin-left: 40%;
+  color: #2a2a2a;
 }
 
 .icon-message {
-  @include sprite($message);
+  //@include sprite($message);
+  margin-left: 40%;
+  color: #2a2a2a;
 }

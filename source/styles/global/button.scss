@@ -1,4 +1,5 @@
 .button {
+  background-color: #5c5c5c;
   display: inline-block;
   border-radius: 3px;
   padding: 10px 22px 7px;
@@ -6,11 +7,11 @@
   color: #fff;
 
   &--red {
-    background: #de2b24;
+    background:#de2b24;
     transition: 0.3s;
 
     &:hover {
-      background: lighten(#de2b24, 7%);
+      background: lighten(#de2b24, 17%);
     }
   }
 
