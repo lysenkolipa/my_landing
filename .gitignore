@@ -105,4 +105,6 @@ build
 .idea/vcs.xml
 .idea/modules.xml
 .idea/my_landing.iml
+.idea/watcherTasks.xml
+
 
