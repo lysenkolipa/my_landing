@@ -7,13 +7,9 @@ const rimraf = require('rimraf');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
-const sourcemaps = require('gulp-sourcemaps');
+const sourcemaps   = require('gulp-sourcemaps');
 
-
-
-
-
-/*------------  Server  -------------*/
+/* -------- Server  -------- */
 gulp.task('server', function() {
     browserSync.init({
         server: {
@@ -22,32 +18,33 @@ gulp.task('server', function() {
         }
     });
 
-
     gulp.watch('build/**/*').on('change', browserSync.reload);
 });
 
-/*------------ Pug compile -------------*/
-
+/* ------------ Pug compile ------------- */
 gulp.task('templates:compile', function buildHTML() {
-    return gulp.src('source/templates/index.pug')
+    return gulp.src('source/template/index.pug')
         .pipe(pug({
             pretty: true
         }))
         .pipe(gulp.dest('build'))
 });
 
-/*------------ Styles compile -------------*/
-
+/* ------------ Styles compile ------------- */
 gulp.task('styles:compile', function () {
     return gulp.src('source/styles/main.scss')
-        .pipe(sass({outputStyle:'compressed'}).on('error', sass.logError))
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(rename('main.min.css'))
         .pipe(gulp.dest('build/css'));
 });
 
-/*------------ JS -------------*/
-gulp.task('js', function () {
+/* --------  js -------- */
+gulp.task('js', function() {
     return gulp.src([
+        'source/js/init.js',
+        'source/js/validation.js',
+        'source/js/form.js',
+        'source/js/navigation.js',
         'source/js/main.js'
     ])
         .pipe(sourcemaps.init())
@@ -56,12 +53,12 @@ gulp.task('js', function () {
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('build/js'));
 });
-/*------------ Sprite compile -------------*/
 
-gulp.task('sprite', function (cb) {
+/* ------------ Sprite ------------- */
+gulp.task('sprite', function(cb) {
     const spriteData = gulp.src('source/images/icons/*.png').pipe(spritesmith({
         imgName: 'sprite.png',
-        imagePath:'../images/sprite.png',
+        imgPath: '../images/sprite.png',
         cssName: 'sprite.scss'
     }));
 
@@ -70,45 +67,36 @@ gulp.task('sprite', function (cb) {
     cb();
 });
 
-
-/*------------ Delete -------------*/
-
-gulp.task('clean', function del(cb){
+/* ------------ Delete ------------- */
+gulp.task('clean', function del(cb) {
     return rimraf('build', cb);
 });
 
-
-/*------------ Copy fonts -------------*/
-gulp.task('copy:fonts', function(){
+/* ------------ Copy fonts ------------- */
+gulp.task('copy:fonts', function() {
     return gulp.src('./source/fonts/**/*.*')
         .pipe(gulp.dest('build/fonts'));
 });
 
-/*------------ Copy images -------------*/
-gulp.task('copy:images', function(){
+/* ------------ Copy images ------------- */
+gulp.task('copy:images', function() {
     return gulp.src('./source/images/**/*.*')
         .pipe(gulp.dest('build/images'));
 });
 
-/*------------ Copy -------------*/
+/* ------------ Copy ------------- */
 gulp.task('copy', gulp.parallel('copy:fonts', 'copy:images'));
 
-
-/*------------ Watchers -------------*/
-
-gulp.task('watch', function(){
-    gulp.watch('source/templates/**/*.pug', gulp.series('templates:compile'));
+/* ------------ Watchers ------------- */
+gulp.task('watch', function() {
+    gulp.watch('source/template/**/*.pug', gulp.series('templates:compile'));
     gulp.watch('source/styles/**/*.scss', gulp.series('styles:compile'));
     gulp.watch('source/js/**/*.js', gulp.series('js'));
 });
 
-/*------------ Gulp default -------------*/
 gulp.task('default', gulp.series(
     'clean',
-    gulp.parallel('templates:compile', 'styles:compile', 'js','sprite', 'copy'),
+    gulp.parallel('templates:compile', 'styles:compile', 'js', 'sprite', 'copy'),
     gulp.parallel('watch', 'server')
- )
-
+    )
 );
-
-
