@@ -7,19 +7,19 @@
   color: #fff;
 
   &--red {
-    background:#de2b24;
+    background:$footer-color;
     transition: 0.3s;
 
     &:hover {
-      background: lighten(#de2b24, 17%);
+      background: lighten($header-color, 17%);
     }
   }
 
   &--yellow {
-    background: #f8cd53;
+    background: $btn-main;
 
     &:hover {
-      background: lighten(#f8cd53, 7%);
+      background: lighten($header-color, 7%);
     }
   }
 

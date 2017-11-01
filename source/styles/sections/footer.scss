@@ -2,29 +2,29 @@
   &__top {
     padding: 88px 0 83px;
     text-align: center;
-    background: #2a2a2a;
+    background: $footer-color;
   }
 
   &__bottom {
     padding:26px;
     text-align: center;
-    background: #515151;
+    background: #cdd422;
   }
 
   &__title {
     margin-bottom: 20px;
     font-size: 1.8125rem;
-    color: lightpink;
+    color: $header-color;
     font-family: $ff-main-bold;
   }
   &__social {
     margin-left:20px;
     padding: 15px;
-    border: 1px solid #515151;
+    border: 1px solid $header-color;
     border-radius: 3px;
 
     &:hover {
-      border:1px solid lightpink;
+      border:1px solid $btn-main;
     }
 
     &:first-child {
@@ -36,13 +36,13 @@
     color:lightpink;
 
     .fa {
-      color: lightpink;
+      color: $btn-small;
     }
   }
   &__text {
     margin-bottom:30px;
     font-size: 0.875rem;
-    color:lightpink;
+    color:$btn-small;
   }
 
   &__field {
@@ -55,27 +55,27 @@
     padding: 20px;
     font-size: 0.875rem;
     border:0;
-    color: lightpink;
-    background: #fff;
+    color: $btn-main;
+    background: $btn-small;
   }
 
   .button {
-    border: 2px solid #515151;
+    border: 2px solid $header-color;
     padding: 15px 37px;
     box-sizing: border-box;
     font-size: 1.0625rem;
     font-family: $ff-main-bold;
     background-color: initial;
-    color: lightpink;
+    color: $btn-main;
 
     &:hover {
-      border:2px solid lightpink;
+      border:2px solid $btn-main;
     }
   }
 
   &__copy {
     font-size: 0.875rem;
-    color: lightpink;
+    color: $header-color;
   }
 
 }

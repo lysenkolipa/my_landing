@@ -1,7 +1,7 @@
 .header {
   &__top {
-    background-color: #f0f2f4;
-    border-bottom: 1px solid #e2e2e2;
+    background-color: $main-color;
+    border-bottom: 1px solid $footer-color;
   }
 
   &__bottom {
@@ -31,7 +31,7 @@
   display: inline-block;
   vertical-align: top;
   padding: 10px 10px 8px;
-  color: #424242;
+  color: $header-color;
   transition: 0.3s;
 
   &:hover {

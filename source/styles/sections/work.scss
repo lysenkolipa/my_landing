@@ -1,7 +1,7 @@
 .work {
   padding: 110px 0;
-  background-color: #e9746f;
-  color: #515151;
+  background-color: $main-color;
+  color: $header-color;
 
   @media (max-width: 985px) {
     padding-bottom: 20px;
@@ -29,17 +29,17 @@
 
   &--with-bottom-line {
     &:after {
-      background: #515151;
+      background: $btn-small;
     }
   }
 }
 
   &__item {
-    width: 256px;
-    height: 256px;
+    width: 400px;
+    height: 400px;
     font-weight: bold;
     color: #ffffff;
-    background: #f35e59;
+    background: $f-color;
 
     &--name {
       position: relative;
