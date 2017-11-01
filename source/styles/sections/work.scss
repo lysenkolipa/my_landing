@@ -47,7 +47,7 @@
       text-align: center;
 
       &:before {
-        //@include sprite($work-item);
+        @include sprite($work-item);
         @include centerer-x();
 
         content: '';
