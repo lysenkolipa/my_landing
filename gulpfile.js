@@ -111,23 +111,4 @@ gulp.task('default', gulp.series(
 
 );
 
-/*------------ Gulp uglify -------------*/
-// gulp.task('autoprefixer', function(){
-//     return gulp.src('source/main.scss')
-//         .pipe(autoprefixer({
-//             browsers: ['last 2 versions'],
-//             cascade: false
-//         }))
-//         .pipe(gulp.dest('dist'));
-//  }
-// );
 
-/*------------ Gulp sourcemaps -------------*/
-gulp.task('javascript', function() {
-    gulp.src('src/**/*.js')
-        .pipe(sourcemaps.init())
-        .pipe(plugin1())
-        .pipe(plugin2())
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('dist'));
-});
