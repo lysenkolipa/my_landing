@@ -24,7 +24,7 @@
     margin: auto auto 20px;
     width:65px;
     height: 65px;
-    border:2px solid lightpink;
+    border:2px solid $header-color;
     border-radius: 50%;
   }
 
@@ -45,7 +45,7 @@
   border-radius: 3px;
   color: #828282;
   text-align: center;
-  background-color: #fff;
+  background-color: $btn-main;
 
   @media (max-width: 810px) {
     width: 90%;
@@ -76,11 +76,11 @@
     text-align: center;
     font-size: 2rem;
     color: #ffffff;
-    background: lightpink;
+    background: $header-color;
     transition: 0.3s;
 
     &:hover {
-      background: lighten(lightpink, 15%);
+      background: lighten($header-color, 15%);
     }
   }
 
@@ -102,6 +102,7 @@
     border: 1px solid #d8d8d8;
     border-radius: 3px;
     font-size: 0.875rem;
+    background: $f-color;
 
     &:focus {
       box-shadow: 0 0 8px 1px rgba(0,0,0,0.5);

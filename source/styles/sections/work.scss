@@ -1,7 +1,7 @@
 .work {
   padding: 110px 0;
   background-color: $main-color;
-  color: $header-color;
+  color: $footer-color;
 
   @media (max-width: 985px) {
     padding-bottom: 20px;
@@ -43,7 +43,7 @@
 
     &--name {
       position: relative;
-      padding: 130px 40px 75px 56px;
+      padding: 128px 21px 75px 54px;
       text-align: center;
 
       &:before {

@@ -1,7 +1,7 @@
 .approach {
   padding: 86px 0 94px;
-  color: #2a2a2a;
-  background: #eeeeee;
+  color: $btn-small;
+  background: $f-color;
 
   .title {
     @media(max-width: 985px) {
@@ -98,11 +98,11 @@
     height: 103px;
     padding-top:10px;
     border-radius: 5px;
-    border:2px solid #fff;
+    border:2px solid $main-color;
     text-align: center;
     font-size: 1.25rem;
-    background-color:lightpink;
-    color: #fff;
+    background-color:$f-color;
+    color: $main-color;
 
     &:before {
       content: counter(count);
@@ -111,7 +111,7 @@
       font-family: $ff-steps;
       font-size:3rem;
       line-height: 1;
-      color: #fff;
+      color: $main-color;
     }
 
     @media (max-width: 985px) {
@@ -129,6 +129,4 @@
     margin: 0;
     line-height: 1.5;
   }
-
-
 }
